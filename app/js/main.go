@@ -7,5 +7,9 @@ import (
 )
 
 func main() {
-    js.Module.Get("exports").Set("BitcoinSign", libcoins.BitcoinSign)
+    js.Global.Set("BitcoinSign", BitcoinSign)
+}
+
+func BitcoinSign(key, message string) string {
+    return libcoins.BitcoinSign(key, message).Unwrap()
 }
