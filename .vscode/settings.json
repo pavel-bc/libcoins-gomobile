@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "libcoins.h": "c",
+        "stddef.h": "c"
+    }
+}
