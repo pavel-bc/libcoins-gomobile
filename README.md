@@ -49,6 +49,6 @@ Build & run:
 
 Open browser at [localhost:8080](http://localhost:8080) and run in console:
 
-    ```js
-    window.BitcoinSign("22a47fa09a223f2aa079edf85a7c2d4f8720ee63e502ee2869afab7de234b80c", "test");
-    ```
+```js
+window.BitcoinSign("22a47fa09a223f2aa079edf85a7c2d4f8720ee63e502ee2869afab7de234b80c", "test");
+```
