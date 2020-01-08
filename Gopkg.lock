@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:2cae1c00c4e5d6fe56acd4b9b6ccbb2bda50cb23fa8d4375f29c8be9a51e6865"
+  name = "github.com/algorand/go-algorand-sdk"
+  packages = ["types"]
+  pruneopts = "NUT"
+  revision = "a92a70dff73a56b5c9ef9945d3792ec08d587d37"
+  version = "v1.2.1"
+
+[[projects]]
   digest = "1:dffd684b626e8d25a361c71e5460cb4516ffc3e902ad9f05b58bca9465193767"
   name = "github.com/btcsuite/btcd"
   packages = [
@@ -29,9 +37,21 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:0a098e49634c82146af53b34c63954a3bdca849a9a1ab479a677e6e66cbb16bb"
+  digest = "1:f14d1b50e0075fb00177f12a96dd7addf93d1e2883c25befd17285b779549795"
+  name = "github.com/gopherjs/gopherjs"
+  packages = ["js"]
+  pruneopts = "NUT"
+  revision = "ce3c9ade29deed38a85f259f40e823cc17213830"
+
+[[projects]]
+  branch = "master"
+  digest = "1:de3ada36fec2d05c0efdfc94521e0bbb2db9d7538446987822482709de5bd4dc"
   name = "golang.org/x/crypto"
-  packages = ["sha3"]
+  packages = [
+    "ed25519",
+    "ed25519/internal/edwards25519",
+    "sha3",
+  ]
   pruneopts = "NUT"
   revision = "53104e6ec876ad4e22ad27cce588b01392043c1b"
 
@@ -47,9 +67,11 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/algorand/go-algorand-sdk/types",
     "github.com/btcsuite/btcd/btcec",
     "github.com/btcsuite/btcd/chaincfg/chainhash",
     "github.com/ethereum/go-ethereum/crypto",
+    "github.com/gopherjs/gopherjs/js",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
