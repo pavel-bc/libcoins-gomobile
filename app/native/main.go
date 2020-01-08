@@ -5,13 +5,16 @@ import "fmt"
 import "github.com/pavel-bc/libcoins/libcoins"
 
 //export BitcoinSign
-func BitcoinSign(key, message string) string {
-	return libcoins.BitcoinSign(key, message).Unwrap()
+func BitcoinSign(cKey, cMsg *C.char) *C.char {
+	key := C.GoString(cKey)
+	msg := C.GoString(cMsg)
+	res := libcoins.BitcoinSign(key, msg).Unwrap()
+	return C.CString(res)
 }
 
 //export Print
 func Print(data string) {
-    fmt.Println(data)
+	fmt.Println(data)
 }
 
 func main() {
